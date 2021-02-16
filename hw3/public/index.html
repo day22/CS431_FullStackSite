@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Aidan Day CS341 HW1 -->
+<!-- https://www.w3schools.com/jquery/default.asp was referensed heavly in the production of this site -->
+
+<head>
+  <link rel="stylesheet" href="stylesheets\website.css">
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+  </script>
+</head>
+
+<html>
+<header>
+  <h1>Cheesecake Order Form</h1>
+</header>
+
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/800px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="delicious cheesecake">
+
+  <section class="items">
+    <h2 id="success" style="display:none">Success! Your order was placed!</h2>
+    <form id="myform">
+      <h3 align="center"><u>Order Now!</u></h3>
+      <p>Quatity of Toppings:</p>
+
+      <div class="inline-block">
+        <select name="quantity" id="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select><br>
+      </div>
+      <div class="inline-block">
+        <input type="radio" name="topping" value="Plain">
+        <label for="plain">Plain</label><br>
+        <input type="radio" name="topping" value="Cherry">
+        <label for="cherry">Cherry</label><br>
+        <input type="radio" name="topping" value="Chocolate">
+        <label for="chocolate">Chocolate</label>
+      </div>
+
+      <p>Notes:</p>
+      <input id="notes" type="text" placeholder="Enter any special instructions here" size="50"><br>
+      <input type="submit" value="Order" id="submit">
+    </form>
+  </section>
+
+  <div class="items">
+    <div>
+      <h3 style="display: inline">Total Orders for</h3>
+      <select name="month" size="1" id="monthdd">
+        <option value="jan">Jan</option>
+        <option value="feb">Feb</option>
+        <option value="mar">Mar</option>
+        <option value="apr">Apr</option>
+        <option value="may">May</option>
+        <option value="jun">Jun</option>
+        <option value="jul">Jul</option>
+        <option value="aug">Aug</option>
+        <option value="sep">Sep</option>
+        <option value="Oct">Oct</option>
+        <option value="nov">Nov</option>
+        <option value="dec">Dec</option>
+      </select>
+    </div>
+    <ul>
+      <li>31 Cherry</li>
+      <li>40 Chocolate</li>
+      <li>10 Plain</li>
+    </ul>
+  </div>
+  <script src="javascripts/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+/*
+Aidan Day CS341 HW1
+*/
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: .5em solid #264653;
+  filter: drop-shadow(30px 10px 4px #d3d3d3);
+}
+
+header{
+  text-align: center;
+  background-color: #e76f51;
+  padding: 10px;
+  font-size: 40px;
+  margin: 0 0 30px 0;
+}
+html{
+  background-color: #f8f1f1
+}
+.items {
+  background-color: #2a9d8f;
+  padding: 2em;
+  align: center;
+  display: block;
+  margin: 2em auto 2em auto;
+  width: 40%;
+  border-radius: 5%;
+  border: .25em solid #264653;
+  filter: drop-shadow(15px 10px 4px #d3d3d3);
+
+}
+.inline-block{
+  display: inline-block;
+  height: auto;
+}
+#success {
+  text-align: center;
+}
+
+#monthdd {
+    min-height:auto; 
+    overflow-y :auto; 
+    overflow-x: hidden; 
+    position:absolute;
+    width: auto;
+    display: inline;
+ }
