@@ -5,7 +5,8 @@
 
 <head>
   <link rel="stylesheet" href="stylesheets\website.css">
-  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+  <script 
+  src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
   </script>
 </head>
 
@@ -20,7 +21,7 @@
   <section class="items">
     <h2 id="success" style="display:none">Success! Your order was placed!</h2>
     <form id="myform">
-      <h3 align="center"><u>Order Now!</u></h3>
+      <h3 style="text-align:center"><u>Order Now!</u></h3>
       <p>Quatity of Toppings:</p>
 
       <div class="inline-block">
@@ -49,29 +50,33 @@
   <div class="items">
     <div>
       <h3 style="display: inline">Total Orders for</h3>
-      <select name="month" size="1" id="monthdd">
-        <option value="jan">Jan</option>
-        <option value="feb">Feb</option>
-        <option value="mar">Mar</option>
-        <option value="apr">Apr</option>
-        <option value="may">May</option>
-        <option value="jun">Jun</option>
-        <option value="jul">Jul</option>
-        <option value="aug">Aug</option>
-        <option value="sep">Sep</option>
-        <option value="Oct">Oct</option>
-        <option value="nov">Nov</option>
-        <option value="dec">Dec</option>
-      </select>
+      <div class="dropdown">
+        <button class="dropbtn" id="monthButton">Jan</button>
+        <div class="dropdown-content">
+          <a href="#" id="Jan" class="month">Jan</a>
+          <a href="#" id="Feb" class="month">Feb</a>
+          <a href="#" id="Mar" class="month">Mar</a>
+          <a href="#" id="Apr" class="month">Apr</a>
+          <a href="#" id="May" class="month">May</a>
+          <a href="#" id="Jun" class="month">Jun</a>
+          <a href="#" id="Jul" class="month">Jul</a>
+          <a href="#" id="Aug" class="month">Aug</a>
+          <a href="#" id="Sep" class="month">Sep</a>
+          <a href="#" id="Oct" class="month">Oct</a>
+          <a href="#" id="Nov" class="month">Nov</a>
+          <a href="#" id="Dec" class="month">Dec</a>
+        </div>
+      </div>
     </div>
     <ul>
-      <li>31 Cherry</li>
-      <li>40 Chocolate</li>
-      <li>10 Plain</li>
+      <li id="order1">31 Cherry</li>
+      <li id="order2">40 Chocolate</li>
+      <li id="order3">10 Plain</li>
     </ul>
   </div>
   <script src="javascripts/scripts.js"></script>
-
+  <!-- Work for HW4 was done in collaboration with Noah Lafave-->
+  <script src="javascripts/hw4Script.js"></script>
 </body>
 
 </html>
