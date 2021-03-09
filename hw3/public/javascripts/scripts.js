@@ -1,18 +1,24 @@
-collapseFormAndDisplayOrder = function ( event ) {
+
+var newCustomerNotes;
+var newTopping;
+var newQuantity;
+
+
+let collapseFormAndDisplayOrder = function ( event ) {
     event.preventDefault()
-    var customerNotes = document.getElementById("notes").value;
-    if (customerNotes.includes("vegan")) {
+    newCustomerNotes = document.getElementById("notes").value;
+    if (newCustomerNotes.includes("vegan")) {
         alert("Cheesecake can not be vegan, so sorry.");
     } else {
         $("form").hide();
         var ele = document.getElementsByName("topping");
-        var topping = "Plain";
+        newTopping = "Plain";
         for (i = 0; i < ele.length; i++) {
             if (ele[i].checked)
-                topping = ele[i].value;
+                newTopping = ele[i].value;
         }
-        var quantity = document.getElementById("quantity").value;
-        var order = "Success, you ordered " + quantity + " " + topping + " Cheescakes with the notes: " + customerNotes;
+        newQuantity = document.getElementById("quantity").value;
+        var order = "Success, you ordered " + newQuantity + " " + newTopping + " Cheescakes with the notes: " + newCustomerNotes;
         document.getElementById("success").innerHTML = order;
         $("#success").css("display", "block");
     }
@@ -21,3 +27,9 @@ collapseFormAndDisplayOrder = function ( event ) {
 $(function() {
     $("#myform").submit(collapseFormAndDisplayOrder);
 });
+
+$.post("/newOrders", req, function(data) {
+    var newOrder = {quantity: newQuantity, toppings: newTopping, notes:newCustomerNotes};
+    orderJSON = JSON.stringify(newOrder);
+    req.JSON(orderJSON);
+}
